@@ -1,45 +1,71 @@
-h1 {
-    color: #e91e63;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
 }
 
-.message {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin: 10px 0;
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
+h1 {
+    color: #ff1493;
+}
+
 button {
-    background-color: #e91e63;
+    background-color: #ff69b4;
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    margin: 10px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #d81b60;
+    background-color: #ff1493;
+}
+
+.surprise-section {
+    display: flex; /* Use flexbox for the surprise section */
+    justify-content: center; /* Center the GIFs horizontally */
+    margin-top: 20px; /* Add some space above the GIFs */
+}
+
+.gif-container {
+    display: flex; /* Use flexbox for the GIF container */
+    gap: 10px; /* Space between the GIFs */
+}
+
+.surprise-gif {
+    width: 150px; /* Set the desired width */
+    height: 150px; /* Set the desired height */
+    display: none; /* Initially hidden */
 }
 
 .hidden {
     display: none;
 }
-#surpriseMessage {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: #e91e63;
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* styles.css */
+.picture-section img {
+    max-width: 100%; /* Ensures the image doesn't exceed its container */
+    height: auto; /* Maintains aspect ratio */
+    width: 150px; /* Default size */
+    border-radius: 50%;
+    border: 5px solid #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  @media (max-width: 600px) {
+    .picture-section img {
+      width: 100px; /* Smaller size for mobile devices */
+      height: 100px;
     }
-    to {
-        opacity: 1;
-    }
-}
+  }
