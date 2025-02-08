@@ -3,22 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Out-of-This-World Birthday Surprise</title>
+  <title> Birthday Surprise🎉</title>
+  <h1><em>Happy birthday to the BEST mom in the world!</em> 🎉</h1>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <!-- Picture Section -->
     <div class="picture-section">
-      <img id="birthday-pic" src="IMG_1476.jpg" alt="Birthday Picture" width="140" height="140">
+      <img id="birthday-pic" src="IMG_1476.jpg" alt="Birthday Picture" width="200" height="200">
     </div>
 
     <!-- Message Section -->
     <div class="message-section">
-      <p id="message">Click the button below for a surprise!</p>
+      <p id="message">🎉 Surprise, Mom! 🎉</p>
       <button id="surprise-button">Click for Surprise</button>
       <button id="message-button">Click for Message</button>
     </div>
+
+    <!-- Hidden Mom's Message -->
+    <div class="hidden-message">
+        <p id="mom-message" style="display: none;">
+          <strong>Dear Mom,</strong><br><br>
+          You are the most amazing person in my life. 
+          Your love, kindness, and strength inspire me every day.<br> 
+          Today is all about celebrating YOU!<br><br>
+          Thank you for always being my rock. 
+          I love you to the moon and back! 🌙💖<br><br>
+          With all my love,<br>
+          Janet
+        </p>
+      </div>
 
     <!-- Surprise Section -->
     <div class="surprise-section">
@@ -45,6 +60,11 @@
         spread: 70,
         origin: { y: 0.6 }
       });
+    });
+
+    // Click button to show mom's message
+    document.getElementById('message-button').addEventListener('click', function () {
+      document.getElementById('mom-message').style.display = 'block';
     });
   </script>
 </body>
