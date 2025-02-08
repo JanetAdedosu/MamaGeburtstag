@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, Mom!</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Out-of-This-World Birthday Surprise</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🎉 Happy Birthday, Mom! 🎉</h1>
-        <p class="message">Dear Mom,</p>
-        <p class="message">On your special day, I want to take a moment to appreciate everything you do for me. You are my guiding light, my biggest supporter, and my best friend. Thank you for your endless love, patience, and care. I am so grateful to have you in my life.</p>
-        <p class="message">Wishing you a day filled with joy, laughter, and all the things you love. You deserve the world and more!</p>
-        <p class="message">With all my love,</p>
-        <p class="message">Janet</p>
-        <button id="surpriseButton">Click for a Surprise!</button>
-        <div id="surpriseMessage" class="hidden">
-            <p>🎂 You are the best mom in the world! 🎂</p>
-        </div>
+  <div class="container">
+    <!-- Picture Section -->
+    <div class="picture-section">
+      <img id="birthday-pic" src="IMG_1476.jpg" alt="Birthday Picture" width="140" height="140">
     </div>
-    <script src="script.js"></script>
+
+    <!-- Message Section -->
+    <div class="message-section">
+      <p id="message">Click the button below for a surprise!</p>
+      <button id="surprise-button">Click for Surprise</button>
+    </div>
+
+    <!-- Surprise Section -->
+    <div class="surprise-section">
+      <audio id="birthday-audio" src="Michael Riepen - Happy Birthday.mp3"></audio>
+      <img id="surprise-gif-1" src="giphy.webp" alt="Surprise GIF" style="display: none; width: 200px;">
+      <img id="surprise-gif-2" src="dance party dancing GIF.gif" alt="Surprise GIF" style="display: none; width: 200px;">
+      <audio id="extra-audio" src="James Lam - Happy Birthday.mp3"></audio>
+    </div>
+  </div>
+
+  <script src="script.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    document.getElementById('surprise-button').addEventListener('click', function () {
+      // Show the first GIF
+      document.getElementById('surprise-gif-1').style.display = 'block';
+      // Show the second GIF
+      document.getElementById('surprise-gif-2').style.display = 'block';
+      // Play the birthday audio
+      document.getElementById('birthday-audio').play();
+      // Trigger confetti
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    });
+  </script>
 </body>
 </html>
